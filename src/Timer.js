@@ -50,28 +50,4 @@ class Timer extends Component {
 
 }
 
-export default Timer;lick={this.stopClock}>Stop</button>
-        <aside className="mountText">Mounted</aside>
-        <small onClick={this.handleClose}>X</small>
-      </section>
-    );
-  }
-
-  //clock functions
-  clockTick = () => {
-    this.setState(prevState => ({
-      time: prevState.time + 1
-    }));
-  };
-
-  stopClock = () => {
-    clearInterval(this.interval);
-  };
-
-  // for the 'x' button,
-  handleClose = () => {
-    this.props.removeTimer(this.props.id);
-  };
-}
-
 export default Timer;
